@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="650.0" maxWidth="500.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" style="-fx-background-image: \\home.png;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MenuBar1">
+   <children>
+      <VBox maxHeight="650.0" maxWidth="500.0" prefHeight="650.0" prefWidth="500.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" maxHeight="75.0" maxWidth="500.0" prefHeight="75.0" prefWidth="500.0" style="-fx-border-width: 0px 0px 2px 0px; -fx-border-color: #657786;">
+               <children>
+                  <Button maxHeight="60.0" maxWidth="60.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/settings.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Region maxHeight="75.0" maxWidth="240.0" prefHeight="75.0" prefWidth="240.0" style="-fx-background-color: transparent;" />
+                  <Label alignment="CENTER" maxHeight="60.0" maxWidth="217.0" prefHeight="60.0" prefWidth="217.0" text="Settings" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial" size="30.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button maxHeight="60.0" maxWidth="60.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: transparent;" />
+               </children>
+            </HBox>
+            <VBox maxHeight="525.0" maxWidth="500.0" prefHeight="525.0" prefWidth="500.0" />
+            <HBox alignment="CENTER_LEFT" maxHeight="50.0" maxWidth="500.0" prefHeight="50.0" prefWidth="500.0" style="-fx-border-width: 2px 0px 0px 0px; -fx-border-color: #657786;">
+               <children>
+                  <Button fx:id="backButton" maxHeight="60.0" maxWidth="60.0" mnemonicParsing="false" onAction="#setBackButton" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/back.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Region maxHeight="50.0" maxWidth="280.0" prefHeight="50.0" prefWidth="280.0" style="-fx-background-color: transparent;" />
+                  <Button fx:id="log_out_button" maxHeight="35.0" maxWidth="110.0" mnemonicParsing="false" onAction="#setLog_out_button" prefHeight="35.0" prefWidth="110.0" style="-fx-background-color: #1da1f2; -fx-background-radius: 20;" text="Log out" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</Pane>

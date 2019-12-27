@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="650.0" maxWidth="500.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Search1">
+   <children>
+      <VBox maxHeight="650.0" maxWidth="500.0" prefHeight="650.0" prefWidth="500.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" maxHeight="75.0" maxWidth="500.0" prefHeight="75.0" prefWidth="500.0" spacing="15.0" style="-fx-border-width: 0px 0px 2px 0px; -fx-border-color: #657786;">
+               <children>
+                  <Button fx:id="menuButton" maxHeight="60.0" maxWidth="60.0" mnemonicParsing="false" onAction="#onMenuButtonClicked" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/menubar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <TextField fx:id="searchField" prefHeight="31.0" prefWidth="400.0" promptText="search" style="-fx-background-color: #e1e8ed; -fx-background-radius: 25;">
+                     <font>
+                        <Font name="Arial" size="19.0" />
+                     </font></TextField>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <VBox maxHeight="525.0" maxWidth="500.0" prefHeight="525.0" prefWidth="500.0" style="-fx-background-color: #1da1f2;">
+               <children>
+                  <AnchorPane maxHeight="150.0" maxWidth="500.0" prefHeight="150.0" prefWidth="500.0" style="-fx-border-color: ;">
+                     <children>
+                        <Label alignment="TOP_LEFT" layoutX="50.0" layoutY="15.0" maxHeight="120.0" maxWidth="450.0" prefHeight="120.0" prefWidth="400.0" text="Here you can search any user you want&#10;all you gotta do is type ;)&#10;&#10;good luck&#10;" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="22.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="searchUsersButton" layoutX="308.0" layoutY="93.0" mnemonicParsing="false" onAction="#onSearchUsersButtonClicked" prefHeight="31.0" prefWidth="132.0" style="-fx-background-color: #ffffff; -fx-background-radius: 25;" text="Search" textFill="#1da1f2">
+                           <font>
+                              <Font name="Arial Bold" size="19.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <ScrollPane fx:id="resultPane" hbarPolicy="NEVER" prefHeight="371.0" prefWidth="500.0" style="-fx-background-color: #e1e8ed;">
+                     <content>
+                        <VBox fx:id="resultShow" alignment="CENTER" maxWidth="490.0" prefWidth="490.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" maxHeight="50.0" maxWidth="500.0" prefHeight="50.0" prefWidth="500.0" spacing="100.0" style="-fx-border-width: 2px 0px 0px 0px; -fx-border-color: #657786;">
+               <children>
+                  <Button fx:id="homePageButton" maxHeight="60.0" maxWidth="60.0" mnemonicParsing="false" onAction="#onHomePageButtonClicked" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/homepage.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="searchButton" maxHeight="60.0" maxWidth="60.0" mnemonicParsing="false" onAction="#onSearchButtonClicked" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/search.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="myProfileButton" maxHeight="60.0" maxWidth="60.0" mnemonicParsing="false" onAction="#onMyProfileButtonClicked" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/profile.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</Pane>

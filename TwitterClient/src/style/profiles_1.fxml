@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="650.0" maxWidth="500.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Profiles1">
+   <children>
+      <AnchorPane maxHeight="650.0" maxWidth="500.0" prefHeight="650.0" prefWidth="500.0">
+         <children>
+            <AnchorPane maxHeight="140.0" maxWidth="500.0" prefHeight="140.0" prefWidth="500.0" style="-fx-background-color: #1da1f2;">
+               <children>
+                  <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onBackButtonClicked" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: #657786; -fx-background-radius: 60;">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/profileBack.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="menuBarButton" layoutX="431.0" layoutY="14.0" mnemonicParsing="false" onAction="#onMenuBarButtonClicked" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: #657786; -fx-background-radius: 60;">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/3dotMenu.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="140.0" maxHeight="510.0" maxWidth="500.0" prefHeight="510.0" prefWidth="500.0" style="-fx-background-color: #f5f8fa;">
+               <children>
+                  <Label fx:id="nameLabel" layoutX="24.0" layoutY="46.0" maxHeight="50.0" maxWidth="350.0" prefHeight="50.0" prefWidth="350.0" text="Mazyar">
+                     <font>
+                        <Font name="Arial Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="24.0" layoutY="96.0" maxHeight="30.0" maxWidth="350.0" prefHeight="30.0" prefWidth="23.0" text="\@" textFill="#657786">
+                     <font>
+                        <Font name="Arial" size="19.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="24.0" layoutY="-61.0" mnemonicParsing="false" style="-fx-background-radius: 100; -fx-background-color: #FFFFFF;">
+                     <graphic>
+                        <ImageView fitHeight="131.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/user.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label fx:id="usernameLabel" layoutX="47.0" layoutY="96.0" maxHeight="30.0" maxWidth="350.0" prefHeight="30.0" prefWidth="246.0" text="asdkansk" textFill="#657786">
+                     <font>
+                        <Font name="Arial" size="19.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="setUpProfileButton" layoutX="322.0" layoutY="14.0" mnemonicParsing="false" onAction="#onSetUpProfileButtonClicked" prefHeight="31.0" prefWidth="157.0" style="-fx-background-color: transparent; -fx-border-color: #657786; -fx-border-radius: 25; -fx-border-width: 2px;" text="Set up profile" textFill="#657786">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="followingNumbers" layoutX="24.0" layoutY="156.0" maxHeight="30.0" maxWidth="350.0" prefHeight="30.0" prefWidth="35.0" text="123">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="followersNumbers" layoutX="182.0" layoutY="156.0" maxHeight="30.0" maxWidth="350.0" prefHeight="30.0" prefWidth="35.0" text="123">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" layoutY="197.0" maxHeight="40.0" maxWidth="500.0" prefHeight="40.0" prefWidth="500.0" style="-fx-border-color: #e1e8ed; -fx-border-width: 0px 0px 2px 0px;">
+                     <children>
+                        <Label alignment="CENTER" maxHeight="30.0" maxWidth="350.0" prefHeight="30.0" prefWidth="90.0" style="-fx-border-width: 0px 0px 2px 0px; -fx-border-color: #1da1f2;" text="Tweets" textFill="#1da1f2">
+                           <font>
+                              <Font name="Arial" size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <ScrollPane fx:id="tweetsScrollpane" hbarPolicy="NEVER" layoutY="237.0" prefHeight="273.0" prefWidth="500.0">
+                     <content>
+                        <VBox fx:id="tweetLoader" maxWidth="500.0" prefWidth="500.0" />
+                     </content>
+                  </ScrollPane>
+                  <Button fx:id="followButton" layoutX="322.0" layoutY="71.0" mnemonicParsing="false" onAction="#onFollowButtonClicked" prefHeight="31.0" prefWidth="157.0" style="-fx-background-color: #1da1f2; -fx-background-radius: 50;" text="Follow" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                  </Button>
+                  <Hyperlink fx:id="followingsLink" layoutX="59.0" layoutY="155.0" onAction="#onFollowingsLinkClicked" text="Followings" textFill="#657786">
+                     <font>
+                        <Font name="Arial" size="19.0" />
+                     </font>
+                  </Hyperlink>
+                  <Hyperlink fx:id="followersLink" layoutX="217.0" layoutY="152.0" onAction="#onFollowersLinkClicked" text="Followers" textFill="#657786">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Hyperlink>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>

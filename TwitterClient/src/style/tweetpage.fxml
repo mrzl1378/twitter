@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="650.0" maxWidth="500.0" prefHeight="650.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Tweetpage">
+   <children>
+      <VBox maxHeight="650.0" maxWidth="500.0" prefHeight="650.0" prefWidth="500.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" maxHeight="75.0" maxWidth="500.0" prefHeight="75.0" prefWidth="500.0" style="-fx-border-width: 0px 0px 2px 0px; -fx-border-color: #657786;">
+               <children>
+                  <Button fx:id="menubarButton" maxHeight="60.0" maxWidth="60.0" mnemonicParsing="false" onAction="#menu" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/tweet.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Label alignment="CENTER" maxHeight="60.0" maxWidth="200.0" prefHeight="60.0" prefWidth="110.0" text="Tweet" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial" size="27.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Region maxHeight="75.0" maxWidth="240.0" prefHeight="75.0" prefWidth="240.0" style="-fx-background-color: transparent;" />
+                  <Button fx:id="TweetButton" maxHeight="60.0" maxWidth="60.0" mnemonicParsing="false" onAction="#setTweetButton" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: transparent;" />
+               </children>
+            </HBox>
+            <AnchorPane maxHeight="525.0" maxWidth="500.0" prefHeight="525.0" prefWidth="500.0" style="-fx-background-color: #e1e8ed;">
+               <children>
+                  <ImageView fitHeight="85.0" fitWidth="85.0" layoutX="208.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/user.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="98.0" layoutY="116.0" text="your tweet must be less than 140 character" textFill="#657786">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="tweetButton" defaultButton="true" layoutX="141.0" layoutY="346.0" mnemonicParsing="false" onAction="#onTweetButtonClicked" prefHeight="43.0" prefWidth="220.0" style="-fx-background-color: #1DA1F2; -fx-background-radius: 25;" text="Tweet" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="23.0" />
+                     </font>
+                  </Button>
+                  <TextArea fx:id="tweetText" layoutX="76.0" layoutY="175.0" prefHeight="150.0" prefWidth="350.0" promptText="Your tweet here" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #657786;">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </TextArea>
+                  <Label fx:id="errorLabel" alignment="CENTER" layoutX="147.0" layoutY="405.0" prefHeight="43.0" prefWidth="206.0" style="-fx-background-color: transparent;" textFill="#e11010">
+                     <font>
+                        <Font name="Arial" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <HBox alignment="CENTER_LEFT" maxHeight="50.0" maxWidth="500.0" prefHeight="50.0" prefWidth="500.0" style="-fx-border-width: 2px 0px 0px 0px; -fx-border-color: #657786;">
+               <children>
+                  <Button fx:id="backButton" maxHeight="60.0" maxWidth="60.0" mnemonicParsing="false" onAction="#onBackButtonClicked" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/back.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Region maxHeight="75.0" maxWidth="280.0" prefHeight="73.0" prefWidth="280.0" style="-fx-background-color: transparent;" />
+                  <Button fx:id="log_out_button" maxHeight="35.0" maxWidth="110.0" mnemonicParsing="false" onAction="#onLogOutButtonClicked" prefHeight="35.0" prefWidth="110.0" style="-fx-background-color: #1da1f2; -fx-background-radius: 20;" text="Log out" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="650.0" maxWidth="500.0" prefHeight="650.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ShowFollowThings">
+   <children>
+      <HBox alignment="CENTER" prefHeight="75.0" prefWidth="500.0" style="-fx-background-color: #1da1f2;">
+         <children>
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#onBackButtonClicked" style="-fx-background-color: #ffffff; -fx-background-radius: 25;" text="Back to Home" textFill="#1da1f2">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <ScrollPane fx:id="resultScroll" hbarPolicy="NEVER" layoutY="75.0" maxHeight="575.0" maxWidth="500.0" prefHeight="575.0" prefWidth="500.0" vbarPolicy="NEVER">
+         <content>
+            <VBox fx:id="resultShow" maxWidth="500.0" prefWidth="500.0" />
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="650.0" maxWidth="500.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LogIn">
+   <children>
+      <VBox alignment="TOP_CENTER" maxHeight="650.0" maxWidth="500.0" prefHeight="642.0" prefWidth="500.0">
+         <children>
+            <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="500.0">
+               <children>
+                  <Region prefHeight="50.0" prefWidth="225.0" />
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/twitter.png" />
+                     </image>
+                  </ImageView>
+                  <Region prefHeight="50.0" prefWidth="120.0" />
+                  <Hyperlink fx:id="sign_in_Button" onAction="#onSignInClicked" opacity="0.78" prefHeight="49.0" prefWidth="99.0" style="-fx-border-color: #f5f8fa;" text="Sign in" textFill="#1da1f2">
+                     <font>
+                        <Font name="Arial Bold" size="23.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="15.0" top="3.0" />
+                     </HBox.margin>
+                  </Hyperlink>
+               </children>
+            </HBox>
+            <VBox maxWidth="-Infinity" prefHeight="585.0" prefWidth="500.0">
+               <children>
+                  <Label prefHeight="65.0" prefWidth="250.0" text="  Log in to Twitter." textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial Bold" size="28.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Text fill="#657786" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="   username" wrappingWidth="247.6708984375">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Text>
+                  <HBox maxWidth="-Infinity" prefHeight="68.0" prefWidth="500.0">
+                     <children>
+                        <Region prefHeight="75.0" prefWidth="18.0" />
+                        <VBox prefHeight="75.0" prefWidth="381.0">
+                           <children>
+                              <TextField fx:id="username_field" prefHeight="53.0" prefWidth="381.0" style="-fx-background-color: transparent;">
+                                 <font>
+                                    <Font name="Arial" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Line endX="340.0" startX="-100.0" stroke="#657786">
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Line>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Text fill="#657786" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="   Password" wrappingWidth="247.6708984375">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Text>
+                  <HBox maxWidth="-Infinity" prefHeight="75.0" prefWidth="500.0">
+                     <children>
+                        <Region prefHeight="75.0" prefWidth="18.0" />
+                        <VBox prefHeight="72.0" prefWidth="436.0">
+                           <children>
+                              <PasswordField fx:id="password_field" maxWidth="500.0" onAction="#onPasswordClicked" prefHeight="57.0" prefWidth="432.0" style="-fx-background-color: transparent;" />
+                              <Line endX="340.0" startX="-100.0" stroke="#657786">
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Line>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Region prefHeight="100.0" prefWidth="141.0" />
+                        <Hyperlink fx:id="forget_password_link" prefHeight="29.0" prefWidth="197.0" style="-fx-background-color: transparent;" text="Forget password?" textFill="#657786">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" top="5.0" />
+                           </HBox.margin>
+                        </Hyperlink>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" maxWidth="-Infinity" prefHeight="50.0" prefWidth="500.0">
+                     <children>
+                        <Label fx:id="errorlabel" alignment="CENTER" prefHeight="52.0" prefWidth="323.0" textFill="#c90e0e">
+                           <font>
+                              <Font name="Arial" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Region maxHeight="192.0" maxWidth="-Infinity" prefHeight="192.0" prefWidth="500.0" />
+                  <Line endX="400.0" startX="-100.0" stroke="#657786" />
+                  <HBox alignment="CENTER_RIGHT" maxHeight="79.0" maxWidth="-Infinity" prefHeight="11.0" prefWidth="500.0">
+                     <children>
+                        <Button fx:id="log_in_button" mnemonicParsing="false" onAction="#onLogInClicked" prefHeight="31.0" prefWidth="98.0" style="-fx-background-color: #1da1f2; -fx-background-radius: 20;" text="Log in" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="15.0" left="15.0" right="25.0" top="15.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets right="5.0" />
+         </padding>
+      </VBox>
+   </children>
+</Pane>
